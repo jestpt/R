@@ -3,9 +3,9 @@ title: "workshopR_ler_tratar_ficheiros"
 author: "Xavier Pinho"
 date: "21 de Marco de 2018"
 output:
-  pdf_document: default
   html_document:
     df_print: paged
+  pdf_document: default
 ---
 
 ```{r}
@@ -61,13 +61,11 @@ b) read.csv
 c) read.csv2
 d) read.delim
 
-###Solução: b) read.csv
-_____________________________________________________________________________________________
 
 Depois do data frame estar criado é possível alterá-lo da maneira como quisermos.
 Observar que na coluna self_employed tem muitos elementos como NA que são valores em falta.
 
-#Representacao do data frame
+#Representação do data frame
 
 ```{r}
 #Informacao sobre a estrutura do objeto
@@ -152,21 +150,16 @@ ________________________________________________________________________________
 Criar um vetor com apenas as linhas que tenham idades inferiores a 23 anos,
 e que tenham Genero como "Male":
 
-###Solução 2:
-```{r}
-solucao2 <- filter(subset1, Age<23 & Gender=="Male")
-solucao2
-```
 _____________________________________________________________________________________________
 
 ```{r}
 #Aceder a uma coluna por Nome
 coluna1 <- subset1$Gender
-coluna1
+#coluna1
 
 #Aceder a uma coluna por Numero
 coluna2 <- subset1[, 2]
-coluna2
+#coluna2
 
 #Aceder a uma linha (todas as colunas)
 linha1 <- subset1[1,]
@@ -183,12 +176,6 @@ subset1[1,1] <- "2014-08-27 11:30:22"
 _____________________________________________________________________________________________
 ###Exercício 3:
 Substitua o elemento da linha 2 e coluna 4 por "Canada" no subset1.
-```{r}
-subset1[2,4] <- "Canada"
-#(Observar subset1)
-```
-
-
 
 _____________________________________________________________________________________________
 
@@ -219,29 +206,10 @@ Quando o data frame estiver pronto, adicione uma nova coluna:
 
 3 coluna -> cidade
 
-
-###Solução 4:
-```{r}
-cores <- c("vermelho","azul","preto","branco")
-idades <- c(23,46,73,90)
-meu.data.frame1 <-data.frame(cores,idades)
-cidades <- c("Porto","Coimbra","Algarve","Aveiro")
-meu.data.frame1$cidades <- cidades
-meu.data.frame1
-```
-
 _____________________________________________________________________________________________
-
 
 ###Exercício Extra:
 
 No subset1 substituir todos os "Estados Unidos" por "Canada".
-
-
-###Solução Extra:
-```{r}
-subset1$Country[subset1$Country=="United States"] <- "Canada"
-
-```
 
 _____________________________________________________________________________________________
