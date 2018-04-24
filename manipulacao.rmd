@@ -1,6 +1,6 @@
 ---
 title: "workshopR_ler_tratar_ficheiros"
-author: "Xavier Pinho"
+author: "JEST"
 date: "21 de Marco de 2018"
 output:
   html_document:
